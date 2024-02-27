@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.cs4520.assignment3.view.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_mvvmFragment"
+            app:destination="@id/fragment_mvvm" />
+        <action
+                android:id="@+id/action_homeFragment_to_mvpFragment"
+                app:destination="@id/fragment_mvp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_mvvm"
+        android:name="com.cs4520.assignment3.view.MvvmFragment"
+        android:label="MvvmFragment">
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragment_mvp"
+            android:name="com.cs4520.assignment3.view.MvpFragment"
+            android:label="MvpFragment">
+    </fragment>
+</navigation>
